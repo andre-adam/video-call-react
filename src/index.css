@@ -1,3 +1,25 @@
+:root {
+  /* CSS HEX */
+  /* Source: https://coolors.co/1a535c-4ecdc4-f7fff7-ff6b6b-ffe66d*/
+  --midnight-green-eagle-green: #1a535cff;
+  --medium-turquoise: #4ecdc4ff;
+  --mint-cream: #f7fff7ff;
+  --bittersweet: #ff6b6bff;
+  --bittersweet-light: rgb(235, 171, 171);
+  --naples-yellow: #ffe66dff;
+  --danger-bootstrap: #dc3545ff;
+
+  --color-primary: var(--medium-turquoise);
+  --color-secondary: rgb(65, 131, 126);
+  --color-dark-primary: var(--midnight-green-eagle-green);
+  --color-white: var(--mint-cream);
+  --color-red: var(--bittersweet);
+  --color-red-secondary: var(--bittersweet-light);
+  --color-danger: var(--danger-bootstrap);
+  --color-yellow: var(--naples-yellow);
+  --color-link: #0079d3;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +27,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--color-dark-primary) !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body #root {
+  width: 100%;
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }

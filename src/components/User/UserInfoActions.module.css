@@ -1,0 +1,14 @@
+.options button {
+  font-size: 1.25rem;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  padding: 0 !important;
+}
+
+.options button::after {
+  content: none;
+}
+
+.options button:focus {
+  box-shadow: 0 0 0 0.2rem var(--color-primary) !important;
+}

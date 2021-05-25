@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
+
+import { useAppDispatch, useAppSelector } from './store';
+import { authActions } from './store/auth-slice';
+import Auth from './components/Auth/Auth';
+import Layout from './components/UI/Layout';
+import UserInfo from './components/User/UserInfo';
+
+import classes from './App.module.css';
+import FriendsList from './components/Friends/FriendsList';
 
 const App = () => {
+  const isAuthenticated = useAppSelector((state) => state.auth.isAuth);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(authActions.verifyAuth());
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.app}>
+      {isAuthenticated ? (
+        <Layout>
+          <div className={classes['left-side']}>
+            <UserInfo />
+            <FriendsList />
+          </div>
+          <div className={classes['right-side']}>Yo</div>
+        </Layout>
+      ) : (
+        <Auth />
+      )}
     </div>
   );
 };

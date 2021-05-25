@@ -3,22 +3,42 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["plugin:react/recommended", "airbnb", "plugin:prettier/recommended"],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "plugin:prettier/recommended",
+    "react-app",
+    "react-app/jest"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
     "ecmaVersion": 12,
-    "sourceType": "module"
+    "sourceType": "module",
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
   },
-  "plugins": ["react", "@typescript-eslint", "react-hooks", "prettier"],
+  "plugins": ["@typescript-eslint", "react", "react-hooks", "prettier"],
   "rules": {
-    "prettier/prettier": "error",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "react/jsx-props-no-spreading": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "max-len": ["warn", { "code": 120, "ignoreComments": true, "ignoreUrls": true }],
+    "no-unused-vars": "warn",
+    "prettier/prettier": ["error", { "printWidth": 120 }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "import/prefer-default-export": "off",
+    "react/prop-types": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -27,11 +47,18 @@
         "tsx": "never"
       }
     ],
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/destructuring-assignment": "off"
   },
   "settings": {
     "import/resolver": {
       "typescript": {}
     }
-  }
+  },
+  "overrides": [{
+    "files": [ "./src/store/*.ts" ],
+    "rules": {
+      "no-param-reassign": "off"
+    }
+  }]
 }

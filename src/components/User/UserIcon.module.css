@@ -1,0 +1,24 @@
+.user-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--color-white);
+  border: 3px solid white;
+}
+
+.img {
+  width: 100%;
+}
+
+.online {
+  border-color: lightgreen;
+}
+
+.away {
+  border-color: orange;
+}
+
+.offline {
+  border-color: red;
+}

@@ -1,0 +1,46 @@
+.container {
+  padding: .5rem 1rem;
+  display: flex;
+  border-bottom: 2px solid var(--color-secondary);
+}
+
+.friend-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--color-white);
+  border: 3px solid white;
+}
+
+.img {
+  width: 100%;
+}
+
+.online {
+  border-color: lightgreen;
+}
+
+.away {
+  border-color: orange;
+}
+
+.offline {
+  border-color: red;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: .5rem 1rem;
+  color: var(--color-white);
+}
+
+.friend-name {
+  font-weight: 500;
+}
+
+.friend-message {
+  font-size: .9rem;
+}

@@ -1,0 +1,42 @@
+.auth {
+  display: flex;
+  align-items: center;  
+  height: 100%;
+}
+
+.auth-container {
+  display: flex;
+  overflow: hidden;
+  width: min(65vw, 100%);
+  height: min(65vh, 100%);
+  box-shadow: 5px 5px 20px;
+  border-radius: 15px;
+  background-color: var(--color-white);
+  margin: 0 auto;
+}
+
+.left-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 15px;
+  border-right: #ccc 2px solid;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.switch-is-login {
+  font-size: .9rem;
+  text-align: center;
+}
+
+.action {
+  color: var(--color-link);
+  font-weight: 600;
+  cursor: pointer;
+}

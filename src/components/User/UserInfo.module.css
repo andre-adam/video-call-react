@@ -1,0 +1,27 @@
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.container-text {
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: .5rem;
+  flex: 1;
+}
+
+.container-text > div {
+  padding: .5rem 1rem;
+}
+
+.container-text > hr {
+  width: 100%;
+  margin: 0 auto;
+  border-color: #eeeeeecc;
+}
+
+.username {
+  font-weight: 600;
+}

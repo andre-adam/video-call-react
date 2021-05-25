@@ -1,0 +1,19 @@
+.input {
+  padding: .25rem .5rem;
+  margin: .25rem .5rem;
+  border: none;
+  min-width: auto;
+  width: 100%;
+  background-color: transparent;
+  color: var(--color-white);
+  border-bottom: 1px solid #f7fff799;
+}
+
+.input::placeholder {
+  color: #f7fff799;
+}
+
+.input:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--color-white) !important;
+}
